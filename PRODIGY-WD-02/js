@@ -1,0 +1,57 @@
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+let laps = [];
+
+document.getElementById('start-btn').addEventListener('click', start);
+document.getElementById('pause-btn').addEventListener('click', pause);
+document.getElementById('reset-btn').addEventListener('click', reset);
+document.getElementById('lap-btn').addEventListener('click', lap);
+
+function start() {
+    startTime = Date.now() - elapsedTime;
+    isRunning = true;
+    updateTimer();
+}
+
+function pause() {
+    elapsedTime = Date.now() - startTime;
+    isRunning = false;
+}
+
+function reset() {
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    laps = [];
+    document.getElementById('time').innerText = '00:00:00';
+    document.getElementById('laps').innerHTML = '';
+}
+
+function lap() {
+    const lapTime = Date.now() - startTime;
+    laps.push(lapTime);
+    const lapList = document.getElementById('laps');
+    const lapListItem = document.createElement('li');
+    lapListItem.innerText = `Lap ${laps.length}: ${formatTime(lapTime)}`;
+    lapList.appendChild(lapListItem);
+}
+
+function updateTimer() {
+    if (isRunning) {
+        elapsedTime = Date.now() - startTime;
+        document.getElementById('time').innerText = formatTime(elapsedTime);
+        setTimeout(updateTimer, 1000);
+    }
+}
+
+function formatTime(time) {
+    const hours = Math.floor(time / 3600000);
+    const minutes = Math.floor((time % 3600000) / 60000);
+    const seconds = Math.floor((time % 60000) / 1000);
+    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+}
+
+function pad(number) {
+    return (number < 10 ? '0' : '') + number;
+}
