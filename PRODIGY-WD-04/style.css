@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Styling for the body */
+
+body {
+    background-color: #f0f0f0;
+    color: blueviolet;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: pink;
+    color: palevioletred;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+
+/* Home Section */
+
+#home {
+    background-color: #1e1e1e;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 250px;
+    /* Increased size */
+    height: 250px;
+    /* Ensure the height matches the width for circular shape */
+    border-radius: 50%;
+    /* Keeps the image circular */
+    margin-top: 1rem;
+    border: 5px solid #fff;
+    /* Increased border size for better visibility */
+}
+
+
+/* About Me Section */
+
+#about {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+#about h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Projects Section */
+
+#projects {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card {
+    background-color: #fff;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Skills Section */
+
+#skills {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+
+/* Contact Section */
+
+#contact {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00aaff;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
